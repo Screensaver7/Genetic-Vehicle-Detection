@@ -1,6 +1,8 @@
 import cv2
 import scipy as sp
 
+#Put input folder on same directory
+
 cap = cv2.VideoCapture()
 #http://www.chart.state.md.us/video/video.php?feed=13015dbd01210075004d823633235daa
 #Use this until we find a better traffic camera
