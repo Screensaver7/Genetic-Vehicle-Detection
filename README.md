@@ -1,18 +1,18 @@
 # Genetic-Vehicle-Detection
 
-Research Project Goal
+#Research Project Goal
 
-  We have a set of stoplight surveillance videos of vehicles. Our goal is to detect the vehicles in those videos and decide if they’re going straight or turning.
+We have a set of stoplight surveillance videos of vehicles. Our goal is to detect the vehicles in those videos and decide if they’re going straight or turning.
 
-Research Project Scope
+#Research Project Scope
 
-  Given videos of vehicles running by a stoplight, determine which lane each vehicle is in and where is it moving.
+Given videos of vehicles running by a stoplight, determine which lane each vehicle is in and where is it moving.
 
-Data
+#Data
 
-  We will collect videos of surveillance cameras from several stoplights.
+We will collect videos of surveillance cameras from several stoplights.
 
-Tasks
+#Tasks
 
 1. Obtain videos of surveillance cameras
 
@@ -20,16 +20,12 @@ Tasks
 
 3. Pedestrians if there are any
 
-Research Project Status
+#Research Project Status
 
-  Arron Bao Van (bvan@gmu.edu)
+Arron Bao Van (bvan@gmu.edu)
 
-  Zhaozhuo Li (Alan) (zli9@gmu.edu)
+Zhaozhuo Li (Alan) (zli9@gmu.edu)
 
-Point of Contact
+#Point of Contact
 
   Jana Kosecka
-
-Midterm Report
-
-Final Report
