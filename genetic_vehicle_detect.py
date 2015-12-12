@@ -189,9 +189,17 @@ def generateP(poparr, pop):
     rtn.append(poparr[ind])
     del poparr[ind]
     #find second top instance
-    scores = [row[1] for row in poparr]
-    ind = scores.index(max([row[1] for row in poparr]))
-    rtn.append(poparr[ind])
+    while (len(poparr) != 0):
+        scores = [row[1] for row in poparr]
+        ind = scores.index(max([row[1] for row in poparr]))
+        #delete if duplicate
+        if (abs(poparr[ind][1] - rtn[0][1]) < 0.0001):
+            del poparr[ind]
+        else:
+            rtn.append(poparr[ind])
+            break
+    if (len(poparr) == 0 and len(rtn) == 1):
+        rtn.append([generateC(), -1.0])
     #generate population w\ parents
     while(len(rtn) < pop):
         rtn.append([generateC(rtn[0][0],rtn[1][0]),-1.0])
@@ -212,11 +220,12 @@ if __name__ == "__main__":
             print p
         #since parents carry over, skip them after first iteration
         start = 0
-        if (i != 0): start = 2
+        if (i != 0):
+            start = 2
         for x in range(start, pop, 3):
             threads = []
             #only 3 threads
-            for c in range(0, 3):
+            for c in range(3):
                 if (x + c >= pop): break
                 thread = myThread(i, x+c, poparr[x+c][0])
                 thread.start()
