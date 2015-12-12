@@ -2,16 +2,25 @@
 The methods we wrote were hard coded for the highway dataset.
 
 Prequisites:
+
 1. Python 2.7.x
+
 2. OpenCV 3.0
+
 3. Numpy
+
 4. Scipy
+
 5. Highway databse from somewhere
 
 Running it:
+
 1. Open terminal at .py file
+
 2. Make sure highway folder is in the same directory
+
 3. python genetic_vehicle_detect.py 8 5
+
 number of iterations = 8, number of population = 5
 
 #Research Project Goal
