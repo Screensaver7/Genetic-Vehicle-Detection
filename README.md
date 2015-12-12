@@ -1,4 +1,5 @@
-# Genetic-Vehicle-Detection
+#Genetic Vehicle Detection
+Algorithm maximizes blob detection by itself
 
 #Research Project Goal
 
