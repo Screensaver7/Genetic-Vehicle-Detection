@@ -201,15 +201,21 @@ if __name__ == "__main__":
     gen = int(argv[1])
     pop = int(argv[2])
     random.seed(datetime.now())
+    #first parents
     poparr = [[generateC(), -1.0], [generateC(), -1.0]]
     cv2.startWindowThread()
     for i in range(gen):
+        #fill population
         poparr = generateP(poparr, pop)
         print "\nGeneration %d:" % i
         for p in poparr:
             print p
-        for x in range(0, pop, 3):
+        #since parents carry over, skip them after first iteration
+        start = 0
+        if (i != 0): start = 2
+        for x in range(start, pop, 3):
             threads = []
+            #only 3 threads
             for c in range(0, 3):
                 if (x + c >= pop): break
                 thread = myThread(i, x+c, poparr[x+c][0])
@@ -217,9 +223,12 @@ if __name__ == "__main__":
                 threads.append(thread)
             for t in range(len(threads)):
                 threads[t].join()
-                poparr[t][1] = threads[t].score
+                poparr[x+t][1] = threads[t].score
             threads[:] = []
             cv2.destroyAllWindows()
+        print "\nGeneration %d Results:" % i
+        for p in poparr:
+            print p
     cv2.destroyAllWindows()
     print "\n Final iteration result:\n", generateP(poparr, 2)
 
