@@ -11,7 +11,7 @@ Prequisites:
 
 4. Scipy
 
-5. Highway databse from somewhere
+5. Highway databse from http://wordpress-jodoin.dmi.usherb.ca/static/dataset/baseline/highway.zip
 
 Running it:
 
