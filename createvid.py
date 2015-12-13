@@ -1,3 +1,5 @@
+## Simply outputs a video of bounding boxes
+
 import cv2
 import scipy as sp
 import numpy as np
